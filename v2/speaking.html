@@ -8,21 +8,23 @@
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            burgundy: { DEFAULT: '#722F37', dark: '#5A252C', light: '#8B3A43' },
-            gold: { DEFAULT: '#C9A94E', light: '#D4BA6A' },
+            obsidian: '#0F0F0F', onyx: '#1A1A1A', graphite: '#242424',
+            gold: { DEFAULT: '#C8A951', light: '#D4BA6A' },
             cream: { DEFAULT: '#FAF7F2', dark: '#F0EBE1' },
-            charcoal: { DEFAULT: '#2D2D2D', light: '#4A4A4A' },
+            silver: '#A8A8A8', ash: '#6B6B6B',
+            burgundy: { DEFAULT: '#722F37', dark: '#5A252C' },
           },
           fontFamily: {
-            serif: ['Playfair Display', 'Georgia', 'serif'],
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['DM Serif Display', 'Georgia', 'serif'],
+            heading: ['Cormorant Garamond', 'Georgia', 'serif'],
+            body: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           }
         }
       }
@@ -31,156 +33,131 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="bg-cream font-sans text-charcoal">
+<body class="bg-obsidian font-body">
 
-  <!-- ========== NAVIGATION ========== -->
-  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- NAV -->
+  <nav id="main-nav" class="nav-solid fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto">
-          <span class="hidden sm:block text-lg font-serif font-semibold text-charcoal">AME Consulting</span>
+          <img src="images/logo.png" alt="AME Consulting" class="h-10 w-auto brightness-200">
+          <span class="hidden sm:block text-base font-heading font-semibold text-cream tracking-wide">AME Consulting</span>
         </a>
         <div class="hidden lg:flex items-center gap-8">
-          <a href="about.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">About</a>
-          <div class="nav-item relative">
-            <a href="services/index.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors flex items-center gap-1">
-              Services
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </a>
-            <div class="nav-dropdown absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
-              <a href="services/leadership-development.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Leadership Development</a>
-              <a href="services/deia-consulting.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">DEIA Consulting</a>
-              <a href="services/executive-coaching.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Executive Coaching</a>
-              <a href="services/workplace-investigations.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Workplace Investigations</a>
-            </div>
-          </div>
-          <a href="bold-method.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">BOLD&trade; Method</a>
-          <a href="book.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Book</a>
-          <a href="speaking.html" class="text-sm font-medium text-burgundy border-b-2 border-gold pb-0.5">Speaking</a>
-          <a href="testimonials.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Testimonials</a>
-          <a href="blog.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Blog</a>
-          <a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">Book a Discovery Call</a>
+          <a href="about.html" class="nav-link text-sm font-medium tracking-wide">About</a>
+          <a href="services.html" class="nav-link text-sm font-medium tracking-wide">Services</a>
+          <a href="bold-method.html" class="nav-link text-sm font-medium tracking-wide">BOLD&trade; Method</a>
+          <a href="speaking.html" class="nav-link text-sm font-medium tracking-wide text-gold">Speaking</a>
+          <a href="blog.html" class="nav-link text-sm font-medium tracking-wide">Insights</a>
+          <a href="contact.html" class="nav-link text-sm font-medium tracking-wide">Contact</a>
+          <a href="contact.html" class="btn-gold px-6 py-2.5 rounded-full text-sm">Book a Discovery Call</a>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-white z-50 flex flex-col lg:hidden">
-      <div class="flex items-center justify-between px-6 h-20 border-b">
-        <span class="text-lg font-serif font-semibold">AME Consulting</span>
-        <button id="mobile-nav-close" class="p-2" aria-label="Close menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-obsidian z-50 flex flex-col lg:hidden">
+      <div class="flex items-center justify-between px-6 h-20 border-b border-gold/10">
+        <span class="text-base font-heading font-semibold text-cream">AME Consulting</span>
+        <button id="mobile-nav-close" class="p-2 text-cream" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <div class="flex-1 overflow-y-auto px-6 py-8 space-y-6">
-        <a href="about.html" class="block text-lg font-medium">About</a>
-        <a href="services/index.html" class="block text-lg font-medium">Services</a>
-        <a href="bold-method.html" class="block text-lg font-medium">BOLD&trade; Method</a>
-        <a href="book.html" class="block text-lg font-medium">Book</a>
-        <a href="speaking.html" class="block text-lg font-medium text-burgundy">Speaking</a>
-        <a href="testimonials.html" class="block text-lg font-medium">Testimonials</a>
-        <a href="blog.html" class="block text-lg font-medium">Blog</a>
-        <a href="contact.html" class="block text-lg font-medium">Contact</a>
-        <a href="contact.html" class="btn-primary block text-center px-6 py-3 rounded-full font-semibold mt-4">Book a Discovery Call</a>
+      <div class="flex-1 overflow-y-auto px-6 py-10 space-y-6">
+        <a href="about.html" class="block text-lg font-heading font-semibold text-cream">About</a>
+        <a href="services.html" class="block text-lg font-heading font-semibold text-cream">Services</a>
+        <a href="bold-method.html" class="block text-lg font-heading font-semibold text-cream">BOLD&trade; Method</a>
+        <a href="speaking.html" class="block text-lg font-heading font-semibold text-gold">Speaking</a>
+        <a href="blog.html" class="block text-lg font-heading font-semibold text-cream">Insights</a>
+        <a href="contact.html" class="block text-lg font-heading font-semibold text-cream">Contact</a>
+        <a href="contact.html" class="btn-gold block text-center px-6 py-3.5 rounded-full mt-4">Book a Discovery Call</a>
       </div>
     </div>
   </nav>
 
-  <!-- ========== PAGE HEADER ========== -->
-  <section class="pt-20">
-    <div class="bg-charcoal text-white py-20 lg:py-28">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="gold-accent mb-6"></div>
-            <h1 class="text-4xl sm:text-5xl font-serif font-bold mb-6">Speaking &amp; Keynotes</h1>
-            <p class="text-lg text-gray-300 mb-8">Aileen M. Edwards delivers keynotes and workshops that challenge audiences to rethink leadership, belonging, and the courage it takes to lead differently.</p>
-            <a href="contact.html" class="btn-gold px-8 py-3 rounded-full font-semibold text-sm inline-block">Inquire About Speaking Availability</a>
-          </div>
-          <div class="hidden lg:flex justify-center">
-            <img src="images/aileen-outdoor.jpg" alt="Aileen M. Edwards — Speaker" class="rounded-2xl shadow-2xl max-w-sm">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SPEAKER BIO ========== -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-charcoal-light leading-relaxed">
-        <strong>Aileen M. Edwards, MA, ACC</strong> is a leadership development consultant, executive coach, and author of <em>Black Skin, Bold Heart</em>. With more than 30 years of executive leadership in Canadian healthcare, including roles as CHRO and Senior Director of People, Culture and Organizational Development, Aileen brings a rare combination of lived experience and professional expertise to every stage she occupies. Her talks are grounded in the proprietary <strong>BOLD&trade; Method</strong> and draw from her journey navigating corporate leadership as a Black woman &mdash; making them equal parts powerful, practical, and personal.
+  <!-- HERO -->
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="gold-accent mx-auto mb-8 reveal"></div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display text-cream leading-tight mb-6 reveal">
+        Keynotes &amp; Workshops That Shift How Leaders Think
+      </h1>
+      <p class="text-xl text-silver max-w-2xl mx-auto reveal">
+        Aileen M. Edwards brings 30+ years of executive experience, the BOLD&trade; Method, and the raw honesty of her memoir to every stage.
       </p>
     </div>
   </section>
 
-  <!-- ========== SIGNATURE KEYNOTES ========== -->
+  <!-- SPEAKER BIO -->
+  <section class="py-16 bg-onyx">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 reveal">
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <img src="images/aileen-headshot-blazer.jpg" alt="Aileen M. Edwards" class="w-40 h-40 rounded-full object-cover shadow-xl shadow-black/40 shrink-0">
+        <div>
+          <p class="text-silver leading-relaxed">
+            <strong class="text-cream">Aileen M. Edwards, MA, ACC, RCC</strong> is a leadership consultant, executive coach, workplace investigator, and author of <em>Black Skin, Bold Heart</em>. A former CHRO and Senior Director at some of Canada&rsquo;s largest healthcare organizations, she speaks from the intersection of executive experience, racial identity, and organizational transformation. Her keynotes challenge audiences to rethink what leadership looks like &mdash; and who gets to practice it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE KEYNOTES -->
   <section class="py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="gold-accent mx-auto mb-6"></div>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Signature Keynotes</h2>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-cream mb-4">Signature Keynotes</h2>
+        <p class="text-silver">Each keynote is customizable to your audience and event format.</p>
       </div>
 
-      <div class="space-y-6 max-w-4xl mx-auto">
-        <div class="bg-white rounded-xl p-8 border border-gray-100 service-card">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-burgundy font-serif font-bold">1</span>
-            </div>
+      <div class="space-y-8 stagger-children">
+        <div class="bg-onyx rounded-xl p-8 border border-gold/10">
+          <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+            <span class="text-gold font-display text-3xl shrink-0">01</span>
             <div>
-              <h3 class="text-xl font-serif font-bold mb-2">&ldquo;Stop Auditioning for Belonging&rdquo;</h3>
-              <p class="text-charcoal-light">Why inclusion can&rsquo;t be earned and what organizations get wrong about belonging. A talk about the invisible labor of code-switching, the myth of meritocracy, and what it actually takes to build cultures where people don&rsquo;t have to perform their way to a seat at the table.</p>
+              <h3 class="text-xl font-heading font-bold text-cream mb-2">&ldquo;Stop Auditioning for Belonging&rdquo;</h3>
+              <p class="text-silver text-sm leading-relaxed">Why the most capable leaders are exhausted &mdash; and what organizations can do about it. This keynote unpacks the hidden cost of belonging labor and offers a framework for building cultures where talent doesn&rsquo;t have to perform its way to inclusion.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-8 border border-gray-100 service-card">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-burgundy font-serif font-bold">2</span>
-            </div>
+        <div class="bg-onyx rounded-xl p-8 border border-gold/10">
+          <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+            <span class="text-gold font-display text-3xl shrink-0">02</span>
             <div>
-              <h3 class="text-xl font-serif font-bold mb-2">&ldquo;When the C-Suite No Longer Fits&rdquo;</h3>
-              <p class="text-charcoal-light">The reckoning of reaching the top and realizing it&rsquo;s not where you belong. For audiences navigating career transitions, organizational misalignment, or the tension between achievement and authenticity.</p>
+              <h3 class="text-xl font-heading font-bold text-cream mb-2">&ldquo;When the C-Suite No Longer Fits&rdquo;</h3>
+              <p class="text-silver text-sm leading-relaxed">A candid talk about the moment professional achievement and personal alignment diverge. For audiences navigating career transitions, mid-career reckonings, or organizational exits. Drawn from Aileen&rsquo;s own journey from CHRO to consultant.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-8 border border-gray-100 service-card">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-burgundy font-serif font-bold">3</span>
-            </div>
+        <div class="bg-onyx rounded-xl p-8 border border-gold/10">
+          <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+            <span class="text-gold font-display text-3xl shrink-0">03</span>
             <div>
-              <h3 class="text-xl font-serif font-bold mb-2">&ldquo;Under Pressure, You Don&rsquo;t Rise &mdash; You Fall Back&rdquo;</h3>
-              <p class="text-charcoal-light">The core insight behind the BOLD&trade; Method. Under pressure, leaders don&rsquo;t rise to the moment &mdash; they fall back on who they&rsquo;ve already practiced being. A practical framework for building the leadership habits that hold when it matters most.</p>
+              <h3 class="text-xl font-heading font-bold text-cream mb-2">&ldquo;Under Pressure, You Don&rsquo;t Rise &mdash; You Fall Back&rdquo;</h3>
+              <p class="text-silver text-sm leading-relaxed">Leadership under crisis reveals who you&rsquo;ve practiced being, not who you aspire to be. This keynote introduces the BOLD&trade; Method and offers practical tools for building the leadership reflexes that hold up when stakes are highest.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-8 border border-gray-100 service-card">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-burgundy font-serif font-bold">4</span>
-            </div>
+        <div class="bg-onyx rounded-xl p-8 border border-gold/10">
+          <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+            <span class="text-gold font-display text-3xl shrink-0">04</span>
             <div>
-              <h3 class="text-xl font-serif font-bold mb-2">&ldquo;Upholding Boundaries Is a Business Strategy&rdquo;</h3>
-              <p class="text-charcoal-light">Why boundaries aren&rsquo;t a personal luxury &mdash; they&rsquo;re a leadership practice. How setting and maintaining boundaries protects your energy, your team, and your organization&rsquo;s culture.</p>
+              <h3 class="text-xl font-heading font-bold text-cream mb-2">&ldquo;Upholding Boundaries Is a Business Strategy&rdquo;</h3>
+              <p class="text-silver text-sm leading-relaxed">Why the most effective leaders set limits &mdash; and how organizations benefit when they do. This talk reframes boundaries from self-care language into strategic leadership practice with measurable organizational impact.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-8 border border-gray-100 service-card">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-burgundy/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-              <span class="text-burgundy font-serif font-bold">5</span>
-            </div>
+        <div class="bg-onyx rounded-xl p-8 border border-gold/10">
+          <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+            <span class="text-gold font-display text-3xl shrink-0">05</span>
             <div>
-              <h3 class="text-xl font-serif font-bold mb-2">&ldquo;Black Skin, Bold Heart&rdquo; &mdash; The Book Talk</h3>
-              <p class="text-charcoal-light">A candid, powerful conversation drawn from Aileen&rsquo;s memoir about race, identity, institutional betrayal, and the radical act of choosing alignment over status. Ideal for conferences, leadership retreats, and organizations committed to authentic DEI dialogue.</p>
+              <h3 class="text-xl font-heading font-bold text-cream mb-2">&ldquo;Black Skin, Bold Heart&rdquo; &mdash; The Book Talk</h3>
+              <p class="text-silver text-sm leading-relaxed">An intimate talk drawn from Aileen&rsquo;s memoir about navigating 30 years of corporate leadership as a Black woman in Canadian healthcare. Raw, reflective, and deeply practical for anyone leading across difference.</p>
             </div>
           </div>
         </div>
@@ -188,107 +165,120 @@
     </div>
   </section>
 
-  <!-- ========== WORKSHOPS ========== -->
-  <section class="py-20 lg:py-28 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="gold-accent mx-auto mb-6"></div>
-        <h2 class="text-3xl font-serif font-bold mb-4">Workshop Offerings</h2>
-        <p class="text-charcoal-light max-w-2xl mx-auto">In addition to keynotes, Aileen delivers interactive workshops that go deeper into the BOLD&trade; Method and practical leadership skills.</p>
+  <!-- WORKSHOP FORMATS -->
+  <section class="py-20 lg:py-28 bg-onyx">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl font-heading font-bold text-cream mb-4">Workshop Offerings</h2>
       </div>
-
-      <div class="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="text-center p-6 rounded-xl border border-gray-100">
-          <h3 class="font-serif font-bold mb-2">BOLD&trade; Method Workshop</h3>
-          <p class="text-sm text-charcoal-light mb-3">Half-day or full-day interactive sessions through all four pillars of the framework</p>
-          <span class="text-xs bg-cream px-3 py-1 rounded-full">Half-day or Full-day</span>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+        <div class="bg-graphite rounded-xl p-6 border border-gold/10 text-center">
+          <p class="text-gold font-heading font-bold text-2xl mb-2">60-90 min</p>
+          <h3 class="text-cream font-medium text-sm mb-1">Keynote</h3>
+          <p class="text-ash text-xs">Conference main stage, leadership summits, annual events</p>
         </div>
-        <div class="text-center p-6 rounded-xl border border-gray-100">
-          <h3 class="font-serif font-bold mb-2">Crucial Conversations</h3>
-          <p class="text-sm text-charcoal-light mb-3">Practical tools for navigating difficult dialogue with confidence, clarity, and empathy</p>
-          <span class="text-xs bg-cream px-3 py-1 rounded-full">Half-day</span>
+        <div class="bg-graphite rounded-xl p-6 border border-gold/10 text-center">
+          <p class="text-gold font-heading font-bold text-2xl mb-2">Half-Day</p>
+          <h3 class="text-cream font-medium text-sm mb-1">BOLD&trade; Method Workshop</h3>
+          <p class="text-ash text-xs">Interactive deep-dive into the four pillars</p>
         </div>
-        <div class="text-center p-6 rounded-xl border border-gray-100">
-          <h3 class="font-serif font-bold mb-2">DEIA Workshops</h3>
-          <p class="text-sm text-charcoal-light mb-3">Customized diversity, equity, inclusion, and accessibility training for leadership teams</p>
-          <span class="text-xs bg-cream px-3 py-1 rounded-full">Customized</span>
+        <div class="bg-graphite rounded-xl p-6 border border-gold/10 text-center">
+          <p class="text-gold font-heading font-bold text-2xl mb-2">Full Day</p>
+          <h3 class="text-cream font-medium text-sm mb-1">Leadership Intensive</h3>
+          <p class="text-ash text-xs">Crucial Conversations, DEIA, team dynamics</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FORMATS ========== -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-serif font-bold text-center mb-8">Available Formats</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-white rounded-xl p-5 border border-gray-100 text-center">
-          <p class="font-semibold">Keynote</p>
-          <p class="text-xs text-charcoal-light">60&ndash;90 minutes</p>
-        </div>
-        <div class="bg-white rounded-xl p-5 border border-gray-100 text-center">
-          <p class="font-semibold">Half-Day Workshop</p>
-          <p class="text-xs text-charcoal-light">3&ndash;4 hours</p>
-        </div>
-        <div class="bg-white rounded-xl p-5 border border-gray-100 text-center">
-          <p class="font-semibold">Full-Day Intensive</p>
-          <p class="text-xs text-charcoal-light">6&ndash;7 hours</p>
-        </div>
-        <div class="bg-white rounded-xl p-5 border border-gray-100 text-center">
-          <p class="font-semibold">Workshop Series</p>
-          <p class="text-xs text-charcoal-light">Multi-session</p>
+        <div class="bg-graphite rounded-xl p-6 border border-gold/10 text-center">
+          <p class="text-gold font-heading font-bold text-2xl mb-2">Series</p>
+          <h3 class="text-cream font-medium text-sm mb-1">Multi-Session Program</h3>
+          <p class="text-ash text-xs">4-8 sessions over weeks for sustained transformation</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CTA ========== -->
-  <section class="py-20 lg:py-28 bg-burgundy text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-6">Inquire About Speaking Availability</h2>
-      <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto">Bring Aileen&rsquo;s powerful keynotes and workshops to your conference, leadership retreat, or corporate event.</p>
+  <!-- BOOK SECTION -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal-left">
+          <div class="bg-graphite rounded-2xl p-10 text-center max-w-sm mx-auto">
+            <div class="bg-obsidian rounded-lg p-8 shadow-2xl border border-gold/10">
+              <p class="text-gold font-display text-3xl mb-1">Black Skin,</p>
+              <p class="text-gold font-display text-3xl mb-4">Bold Heart</p>
+              <div class="w-12 h-0.5 bg-gold mx-auto mb-4"></div>
+              <p class="text-ash text-sm">Aileen M. Edwards</p>
+            </div>
+            <p class="text-ash text-xs mt-4">Coming Soon</p>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <p class="text-xs font-medium text-gold uppercase tracking-[0.2em] mb-4">The Book</p>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold text-cream mb-6">Black Skin, Bold Heart</h2>
+          <p class="text-silver leading-relaxed mb-4">
+            A memoir chronicling 30 years of navigating corporate leadership as a Black woman in Canadian healthcare. From the boardroom to the breaking point, Aileen shares the reckoning of ascending in spaces not built for her &mdash; and the bold decision to leave for alignment and authenticity.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="border border-gold/20 text-gold/70 px-3 py-1 rounded-full text-xs">Executive Identity</span>
+            <span class="border border-gold/20 text-gold/70 px-3 py-1 rounded-full text-xs">The Messy Middle</span>
+            <span class="border border-gold/20 text-gold/70 px-3 py-1 rounded-full text-xs">Leading While Black</span>
+            <span class="border border-gold/20 text-gold/70 px-3 py-1 rounded-full text-xs">Alignment Over Status</span>
+          </div>
+          <p class="text-ash text-sm">Featured in Executives Diary Magazine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-burgundy">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center reveal">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Inquire About Speaking Availability</h2>
+      <p class="text-white/70 text-lg mb-8">Keynotes, workshops, and book talks tailored to your audience.</p>
       <a href="contact.html" class="bg-white text-burgundy px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors inline-block">Get in Touch</a>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="bg-charcoal text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-10">
-        <div class="md:col-span-1">
-          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto mb-4 brightness-200">
-          <p class="text-gray-400 text-sm mb-4">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
+  <!-- FOOTER -->
+  <footer class="bg-obsidian pt-16 pb-8 border-t border-gold/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <img src="images/logo.png" alt="AME Consulting" class="h-10 w-auto brightness-200 mb-4">
+          <p class="text-ash text-sm leading-relaxed mb-5">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/in/aileen-m-edwards" target="_blank" rel="noopener" class="text-ash hover:text-gold transition-colors" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.instagram.com/ame_consulting/" target="_blank" rel="noopener" class="text-ash hover:text-gold transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          </div>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="services/leadership-development.html" class="hover:text-white transition-colors">Leadership Development</a></li>
-            <li><a href="services/deia-consulting.html" class="hover:text-white transition-colors">DEIA Consulting</a></li>
-            <li><a href="services/executive-coaching.html" class="hover:text-white transition-colors">Executive Coaching</a></li>
-            <li><a href="services/workplace-investigations.html" class="hover:text-white transition-colors">Workplace Investigations</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="services.html#leadership" class="hover:text-cream transition-colors">Leadership Development</a></li>
+            <li><a href="services.html#coaching" class="hover:text-cream transition-colors">Executive Coaching</a></li>
+            <li><a href="services.html#deia" class="hover:text-cream transition-colors">DEIA Consulting</a></li>
+            <li><a href="services.html#investigations" class="hover:text-cream transition-colors">Workplace Investigations</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-white transition-colors">About Aileen</a></li>
-            <li><a href="bold-method.html" class="hover:text-white transition-colors">The BOLD&trade; Method</a></li>
-            <li><a href="book.html" class="hover:text-white transition-colors">Black Skin, Bold Heart</a></li>
-            <li><a href="speaking.html" class="hover:text-white transition-colors">Speaking</a></li>
-            <li><a href="testimonials.html" class="hover:text-white transition-colors">Testimonials</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="about.html" class="hover:text-cream transition-colors">About Aileen</a></li>
+            <li><a href="bold-method.html" class="hover:text-cream transition-colors">The BOLD&trade; Method</a></li>
+            <li><a href="speaking.html" class="hover:text-cream transition-colors">Speaking &amp; Book</a></li>
+            <li><a href="blog.html" class="hover:text-cream transition-colors">Insights</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-white transition-colors">amedwards@ameconsulting.ca</a></li>
-            <li><a href="tel:+14167683612" class="hover:text-white transition-colors">(416) 768-3612</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-cream transition-colors">amedwards@ameconsulting.ca</a></li>
+            <li><a href="tel:+14167683612" class="hover:text-cream transition-colors">(416) 768-3612</a></li>
+            <li class="pt-1 text-ash/60">Serving organizations across Ontario and beyond</li>
           </ul>
-          <a href="contact.html" class="inline-block mt-4 btn-gold px-5 py-2 rounded-full text-xs font-semibold">Book a Discovery Call</a>
+          <a href="contact.html" class="btn-gold inline-block mt-5 px-5 py-2 rounded-full text-xs">Book a Discovery Call</a>
         </div>
       </div>
-      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-xs text-gray-500">
+      <div class="border-t border-gold/10 pt-8 text-center text-xs text-ash/50">
         <p>&copy; 2026 AME Consulting. All rights reserved.</p>
       </div>
     </div>

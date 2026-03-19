@@ -4,25 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — AME Consulting</title>
-  <meta name="description" content="Book a discovery call with Aileen M. Edwards or request a proposal for leadership development, DEIA consulting, executive coaching, or workplace investigations.">
+  <meta name="description" content="Book a discovery call or request a proposal from AME Consulting. Leadership development, DEIA consulting, executive coaching, and workplace investigations.">
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            burgundy: { DEFAULT: '#722F37', dark: '#5A252C', light: '#8B3A43' },
-            gold: { DEFAULT: '#C9A94E', light: '#D4BA6A' },
+            obsidian: '#0F0F0F', onyx: '#1A1A1A', graphite: '#242424',
+            gold: { DEFAULT: '#C8A951', light: '#D4BA6A' },
             cream: { DEFAULT: '#FAF7F2', dark: '#F0EBE1' },
-            charcoal: { DEFAULT: '#2D2D2D', light: '#4A4A4A' },
+            silver: '#A8A8A8', ash: '#6B6B6B',
+            burgundy: { DEFAULT: '#722F37', dark: '#5A252C' },
           },
           fontFamily: {
-            serif: ['Playfair Display', 'Georgia', 'serif'],
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['DM Serif Display', 'Georgia', 'serif'],
+            heading: ['Cormorant Garamond', 'Georgia', 'serif'],
+            body: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           }
         }
       }
@@ -31,223 +33,205 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="bg-cream font-sans text-charcoal">
+<body class="bg-obsidian font-body">
 
-  <!-- ========== NAVIGATION ========== -->
-  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- NAV -->
+  <nav id="main-nav" class="nav-solid fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto">
-          <span class="hidden sm:block text-lg font-serif font-semibold text-charcoal">AME Consulting</span>
+          <img src="images/logo.png" alt="AME Consulting" class="h-10 w-auto brightness-200">
+          <span class="hidden sm:block text-base font-heading font-semibold text-cream tracking-wide">AME Consulting</span>
         </a>
         <div class="hidden lg:flex items-center gap-8">
-          <a href="about.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">About</a>
-          <div class="nav-item relative">
-            <a href="services/index.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors flex items-center gap-1">
-              Services
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </a>
-            <div class="nav-dropdown absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
-              <a href="services/leadership-development.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Leadership Development</a>
-              <a href="services/deia-consulting.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">DEIA Consulting</a>
-              <a href="services/executive-coaching.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Executive Coaching</a>
-              <a href="services/workplace-investigations.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Workplace Investigations</a>
-            </div>
-          </div>
-          <a href="bold-method.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">BOLD&trade; Method</a>
-          <a href="book.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Book</a>
-          <a href="speaking.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Speaking</a>
-          <a href="testimonials.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Testimonials</a>
-          <a href="blog.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Blog</a>
-          <a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">Book a Discovery Call</a>
+          <a href="about.html" class="nav-link text-sm font-medium tracking-wide">About</a>
+          <a href="services.html" class="nav-link text-sm font-medium tracking-wide">Services</a>
+          <a href="bold-method.html" class="nav-link text-sm font-medium tracking-wide">BOLD&trade; Method</a>
+          <a href="speaking.html" class="nav-link text-sm font-medium tracking-wide">Speaking</a>
+          <a href="blog.html" class="nav-link text-sm font-medium tracking-wide">Insights</a>
+          <a href="contact.html" class="nav-link text-sm font-medium tracking-wide text-gold">Contact</a>
+          <a href="contact.html" class="btn-gold px-6 py-2.5 rounded-full text-sm">Book a Discovery Call</a>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-white z-50 flex flex-col lg:hidden">
-      <div class="flex items-center justify-between px-6 h-20 border-b">
-        <span class="text-lg font-serif font-semibold">AME Consulting</span>
-        <button id="mobile-nav-close" class="p-2" aria-label="Close menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-obsidian z-50 flex flex-col lg:hidden">
+      <div class="flex items-center justify-between px-6 h-20 border-b border-gold/10">
+        <span class="text-base font-heading font-semibold text-cream">AME Consulting</span>
+        <button id="mobile-nav-close" class="p-2 text-cream" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <div class="flex-1 overflow-y-auto px-6 py-8 space-y-6">
-        <a href="about.html" class="block text-lg font-medium">About</a>
-        <a href="services/index.html" class="block text-lg font-medium">Services</a>
-        <a href="bold-method.html" class="block text-lg font-medium">BOLD&trade; Method</a>
-        <a href="book.html" class="block text-lg font-medium">Book</a>
-        <a href="speaking.html" class="block text-lg font-medium">Speaking</a>
-        <a href="testimonials.html" class="block text-lg font-medium">Testimonials</a>
-        <a href="blog.html" class="block text-lg font-medium">Blog</a>
-        <a href="contact.html" class="block text-lg font-medium text-burgundy">Contact</a>
-        <a href="contact.html" class="btn-primary block text-center px-6 py-3 rounded-full font-semibold mt-4">Book a Discovery Call</a>
+      <div class="flex-1 overflow-y-auto px-6 py-10 space-y-6">
+        <a href="about.html" class="block text-lg font-heading font-semibold text-cream">About</a>
+        <a href="services.html" class="block text-lg font-heading font-semibold text-cream">Services</a>
+        <a href="bold-method.html" class="block text-lg font-heading font-semibold text-cream">BOLD&trade; Method</a>
+        <a href="speaking.html" class="block text-lg font-heading font-semibold text-cream">Speaking</a>
+        <a href="blog.html" class="block text-lg font-heading font-semibold text-cream">Insights</a>
+        <a href="contact.html" class="block text-lg font-heading font-semibold text-gold">Contact</a>
+        <a href="contact.html" class="btn-gold block text-center px-6 py-3.5 rounded-full mt-4">Book a Discovery Call</a>
       </div>
     </div>
   </nav>
 
-  <!-- ========== PAGE HEADER ========== -->
-  <section class="pt-20">
-    <div class="bg-burgundy text-white py-16 lg:py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="gold-accent mb-6"></div>
-        <h1 class="text-4xl sm:text-5xl font-serif font-bold mb-4">Let&rsquo;s Start a Conversation</h1>
-        <p class="text-lg text-white/80 max-w-2xl">Every great engagement begins with a discovery call. Tell us about your organization, your challenges, and what you&rsquo;re trying to accomplish.</p>
-      </div>
+  <!-- HERO -->
+  <section class="pt-32 pb-12 lg:pt-40 lg:pb-16">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div class="gold-accent mx-auto mb-8 reveal"></div>
+      <h1 class="text-4xl sm:text-5xl font-display text-cream leading-tight mb-6 reveal">
+        Let&rsquo;s Start a Conversation
+      </h1>
+      <p class="text-lg text-silver max-w-xl mx-auto reveal">
+        Whether you&rsquo;re exploring leadership development, coaching, DEIA strategy, or workplace investigations &mdash; the first step is a conversation.
+      </p>
     </div>
   </section>
 
-  <!-- ========== CONTACT CONTENT ========== -->
-  <section class="py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+  <!-- MAIN CONTENT -->
+  <section class="py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
 
-        <!-- Discovery Call -->
-        <div>
-          <h2 class="text-2xl font-serif font-bold mb-4">Book a Discovery Call</h2>
-          <p class="text-charcoal-light mb-8">The best way to get started is a 30-minute discovery call. We&rsquo;ll discuss your organization&rsquo;s needs, explore whether we&rsquo;re a good fit, and outline next steps.</p>
-
-          <!-- Calendly placeholder -->
-          <div class="bg-white rounded-xl p-8 border border-gray-100 text-center">
-            <div class="w-16 h-16 bg-burgundy/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <!-- CALENDLY / BOOK A CALL -->
+        <div class="reveal-left">
+          <h2 class="text-2xl font-heading font-bold text-cream mb-6">Book a Discovery Call</h2>
+          <p class="text-silver leading-relaxed mb-8">
+            A 30-minute call to understand your challenges, explore how AME Consulting can help, and determine if we&rsquo;re the right fit.
+          </p>
+          <div class="bg-onyx rounded-xl border border-gold/10 p-12 text-center">
+            <div class="w-16 h-16 border border-gold/30 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="font-serif font-bold text-lg mb-2">Schedule Your Call</h3>
-            <p class="text-sm text-charcoal-light mb-6">Choose a time that works for you. Discovery calls are complimentary and typically last 30 minutes.</p>
-            <!-- Replace with actual Calendly embed or link -->
-            <a href="https://calendly.com" target="_blank" rel="noopener" class="btn-primary px-8 py-3 rounded-full font-semibold text-sm inline-block">Open Scheduling Page</a>
-            <p class="text-xs text-charcoal-light mt-4 italic">Calendly link will be updated with Aileen&rsquo;s scheduling page</p>
+            <h3 class="text-lg font-heading font-semibold text-cream mb-2">Schedule Your Call</h3>
+            <p class="text-ash text-sm mb-6">Calendly booking widget will appear here once connected.</p>
+            <a href="mailto:amedwards@ameconsulting.ca?subject=Discovery Call Request" class="btn-gold px-6 py-3 rounded-full text-sm inline-block">Email to Book a Call</a>
+          </div>
+          <div class="mt-10 space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 border border-gold/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream text-sm font-medium">Email</p>
+                <a href="mailto:amedwards@ameconsulting.ca" class="text-silver text-sm hover:text-gold transition-colors">amedwards@ameconsulting.ca</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 border border-gold/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream text-sm font-medium">Phone</p>
+                <a href="tel:+14167683612" class="text-silver text-sm hover:text-gold transition-colors">(416) 768-3612</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 border border-gold/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream text-sm font-medium">Service Area</p>
+                <p class="text-silver text-sm">Serving organizations across Ontario and beyond, virtually and in-person</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div>
-          <h2 class="text-2xl font-serif font-bold mb-4">Request a Proposal</h2>
-          <p class="text-charcoal-light mb-8">Prefer to share details in writing? Fill out the form below and we&rsquo;ll get back to you within two business days.</p>
-
-          <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" class="space-y-5">
+        <!-- CONTACT FORM -->
+        <div class="reveal-right">
+          <h2 class="text-2xl font-heading font-bold text-cream mb-6">Request a Proposal</h2>
+          <p class="text-silver leading-relaxed mb-8">
+            Tell us about your organization and what you&rsquo;re looking for. We&rsquo;ll respond within 2 business days.
+          </p>
+          <form action="https://formspree.io/f/xpwzgkjp" method="POST" class="space-y-6">
             <div>
-              <label for="name" class="block text-sm font-medium mb-1">Full Name <span class="text-burgundy">*</span></label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-burgundy/20 focus:border-burgundy transition-colors">
+              <label for="name" class="block text-cream text-sm font-medium mb-2">Full Name</label>
+              <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-lg text-sm">
             </div>
-
             <div>
-              <label for="email" class="block text-sm font-medium mb-1">Email <span class="text-burgundy">*</span></label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-burgundy/20 focus:border-burgundy transition-colors">
+              <label for="email" class="block text-cream text-sm font-medium mb-2">Email</label>
+              <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-lg text-sm">
             </div>
-
             <div>
-              <label for="organization" class="block text-sm font-medium mb-1">Organization</label>
-              <input type="text" id="organization" name="organization" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-burgundy/20 focus:border-burgundy transition-colors">
+              <label for="organization" class="block text-cream text-sm font-medium mb-2">Organization</label>
+              <input type="text" id="organization" name="organization" class="form-input w-full px-4 py-3 rounded-lg text-sm">
             </div>
-
             <div>
-              <label for="service" class="block text-sm font-medium mb-1">Service Interest</label>
-              <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-burgundy/20 focus:border-burgundy transition-colors">
+              <label for="service" class="block text-cream text-sm font-medium mb-2">Service Interest</label>
+              <select id="service" name="service" class="form-input w-full px-4 py-3 rounded-lg text-sm">
                 <option value="">Select a service...</option>
                 <option value="leadership-development">Leadership Development Programs</option>
-                <option value="deia-consulting">DEIA Consulting &amp; Strategy</option>
                 <option value="executive-coaching">Executive Coaching</option>
+                <option value="deia-consulting">DEIA Consulting &amp; Strategy</option>
                 <option value="workplace-investigations">Workplace Investigations</option>
                 <option value="speaking">Speaking &amp; Keynotes</option>
+                <option value="board-governance">Board Governance</option>
                 <option value="other">Other / Not Sure</option>
               </select>
             </div>
-
             <div>
-              <label for="message" class="block text-sm font-medium mb-1">Message <span class="text-burgundy">*</span></label>
-              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-burgundy/20 focus:border-burgundy transition-colors" placeholder="Tell us about your organization and what you're looking for..."></textarea>
+              <label for="message" class="block text-cream text-sm font-medium mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" required class="form-input w-full px-4 py-3 rounded-lg text-sm" placeholder="Tell us about your challenges and what you're hoping to achieve..."></textarea>
             </div>
-
-            <button type="submit" class="btn-primary px-8 py-3 rounded-full font-semibold text-sm w-full sm:w-auto">Send Message</button>
+            <button type="submit" class="btn-gold w-full px-8 py-4 rounded-lg text-base">Send Message</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT INFO ========== -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
-        <div>
-          <div class="w-12 h-12 bg-burgundy/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </div>
-          <h3 class="font-semibold mb-1">Email</h3>
-          <a href="mailto:amedwards@ameconsulting.ca" class="text-burgundy text-sm hover:text-burgundy-dark transition-colors">amedwards@ameconsulting.ca</a>
-        </div>
-
-        <div>
-          <div class="w-12 h-12 bg-burgundy/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          </div>
-          <h3 class="font-semibold mb-1">Phone</h3>
-          <a href="tel:+14167683612" class="text-burgundy text-sm hover:text-burgundy-dark transition-colors">(416) 768-3612</a>
-        </div>
-
-        <div>
-          <div class="w-12 h-12 bg-burgundy/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <h3 class="font-semibold mb-1">Service Area</h3>
-          <p class="text-sm text-charcoal-light">Serving organizations across Ontario and beyond, virtually and in-person</p>
-        </div>
-      </div>
-
-      <div class="flex justify-center gap-6 mt-10">
-        <a href="https://www.linkedin.com/in/aileen-m-edwards" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-charcoal-light hover:text-burgundy transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
+  <!-- SOCIAL -->
+  <section class="py-12 border-t border-gold/10">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center reveal">
+      <p class="text-ash text-sm mb-4">Connect with Aileen</p>
+      <div class="flex justify-center gap-6">
+        <a href="https://www.linkedin.com/in/aileen-m-edwards" target="_blank" rel="noopener" class="text-ash hover:text-gold transition-colors">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="https://www.instagram.com/ame_consulting/" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-charcoal-light hover:text-burgundy transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          Instagram
+        <a href="https://www.instagram.com/ame_consulting/" target="_blank" rel="noopener" class="text-ash hover:text-gold transition-colors">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="bg-charcoal text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-10">
-        <div class="md:col-span-1">
-          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto mb-4 brightness-200">
-          <p class="text-gray-400 text-sm mb-4">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
+  <!-- FOOTER -->
+  <footer class="bg-obsidian pt-16 pb-8 border-t border-gold/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <img src="images/logo.png" alt="AME Consulting" class="h-10 w-auto brightness-200 mb-4">
+          <p class="text-ash text-sm leading-relaxed mb-5">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="services/leadership-development.html" class="hover:text-white transition-colors">Leadership Development</a></li>
-            <li><a href="services/deia-consulting.html" class="hover:text-white transition-colors">DEIA Consulting</a></li>
-            <li><a href="services/executive-coaching.html" class="hover:text-white transition-colors">Executive Coaching</a></li>
-            <li><a href="services/workplace-investigations.html" class="hover:text-white transition-colors">Workplace Investigations</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="services.html#leadership" class="hover:text-cream transition-colors">Leadership Development</a></li>
+            <li><a href="services.html#coaching" class="hover:text-cream transition-colors">Executive Coaching</a></li>
+            <li><a href="services.html#deia" class="hover:text-cream transition-colors">DEIA Consulting</a></li>
+            <li><a href="services.html#investigations" class="hover:text-cream transition-colors">Workplace Investigations</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="about.html" class="hover:text-white transition-colors">About Aileen</a></li>
-            <li><a href="bold-method.html" class="hover:text-white transition-colors">The BOLD&trade; Method</a></li>
-            <li><a href="book.html" class="hover:text-white transition-colors">Black Skin, Bold Heart</a></li>
-            <li><a href="speaking.html" class="hover:text-white transition-colors">Speaking</a></li>
-            <li><a href="testimonials.html" class="hover:text-white transition-colors">Testimonials</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="about.html" class="hover:text-cream transition-colors">About Aileen</a></li>
+            <li><a href="bold-method.html" class="hover:text-cream transition-colors">The BOLD&trade; Method</a></li>
+            <li><a href="speaking.html" class="hover:text-cream transition-colors">Speaking &amp; Book</a></li>
+            <li><a href="blog.html" class="hover:text-cream transition-colors">Insights</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-white transition-colors">amedwards@ameconsulting.ca</a></li>
-            <li><a href="tel:+14167683612" class="hover:text-white transition-colors">(416) 768-3612</a></li>
+          <h4 class="font-heading font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
+          <ul class="space-y-2.5 text-sm text-ash">
+            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-cream transition-colors">amedwards@ameconsulting.ca</a></li>
+            <li><a href="tel:+14167683612" class="hover:text-cream transition-colors">(416) 768-3612</a></li>
           </ul>
-          <a href="contact.html" class="inline-block mt-4 btn-gold px-5 py-2 rounded-full text-xs font-semibold">Book a Discovery Call</a>
         </div>
       </div>
-      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-xs text-gray-500">
+      <div class="border-t border-gold/10 pt-8 text-center text-xs text-ash/50">
         <p>&copy; 2026 AME Consulting. All rights reserved.</p>
       </div>
     </div>
