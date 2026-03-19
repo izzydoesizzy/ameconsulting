@@ -2699,7 +2699,7 @@ top: 36%;
     }
     
 .home-mobile-banner img {
-    content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/homebanner.jpg);
+    content: url(../img/mobile%20(8).jpg);
 }    
  .coaching-mobile-banner img{
   content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/banner_022.jpg);     
