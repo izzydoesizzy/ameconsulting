@@ -258,6 +258,49 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Fraunces', Georgia, serif; }
 }
 .form-input::placeholder { color: var(--ash); }
 
+/* ========== PULL QUOTE ========== */
+.pull-quote {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  color: var(--cream);
+  opacity: 0.85;
+  font-style: italic;
+  padding: 3rem 0;
+  max-width: 38ch;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .pull-quote { font-size: 2.25rem; padding: 4rem 0; }
+}
+
+/* ========== ICON GRID ========== */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .icon-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.icon-grid-item {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgba(200, 169, 81, 0.1);
+  border-radius: 0.5rem;
+}
+.icon-grid-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--silver);
+  margin-top: 0.5rem;
+}
+
+/* ========== UTILITY CLASSES ========== */
+.prose-narrow { max-width: 540px; }
+.section-spacer { padding-top: 10rem; padding-bottom: 10rem; }
+.section-spacer-sm { padding-top: 6rem; padding-bottom: 6rem; }
+
 /* ========== MISC ========== */
 ::selection {
   background: rgba(151, 130, 161, 0.3);
