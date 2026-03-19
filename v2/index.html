@@ -14,7 +14,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,19 +23,19 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#0F0F0F',
-            onyx: '#1A1A1A',
-            graphite: '#242424',
+            obsidian: '#1A1520',
+            onyx: '#231E28',
+            graphite: '#2D2735',
             gold: { DEFAULT: '#C8A951', light: '#D4BA6A' },
             cream: { DEFAULT: '#FAF7F2', dark: '#F0EBE1' },
             silver: '#A8A8A8',
             ash: '#6B6B6B',
-            burgundy: { DEFAULT: '#722F37', dark: '#5A252C' },
+            purple: { DEFAULT: '#9782A1', light: '#A995B3' },
           },
           fontFamily: {
-            display: ['DM Serif Display', 'Georgia', 'serif'],
-            heading: ['Cormorant Garamond', 'Georgia', 'serif'],
-            body: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['Fraunces', 'Georgia', 'serif'],
+            heading: ['Fraunces', 'Georgia', 'serif'],
+            body: ['Sora', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           }
         }
       }
@@ -65,7 +65,7 @@
           <a href="speaking.html" class="nav-link text-sm font-medium tracking-wide">Speaking</a>
           <a href="blog.html" class="nav-link text-sm font-medium tracking-wide">Insights</a>
           <a href="contact.html" class="nav-link text-sm font-medium tracking-wide">Contact</a>
-          <a href="contact.html" class="btn-gold px-6 py-2.5 rounded-full text-sm">Book a Discovery Call</a>
+          <a href="contact.html" class="btn-purple px-6 py-2.5 rounded-full text-sm">Book a Discovery Call</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -90,7 +90,7 @@
         <a href="speaking.html" class="block text-lg font-heading font-semibold text-cream">Speaking</a>
         <a href="blog.html" class="block text-lg font-heading font-semibold text-cream">Insights</a>
         <a href="contact.html" class="block text-lg font-heading font-semibold text-cream">Contact</a>
-        <a href="contact.html" class="btn-gold block text-center px-6 py-3.5 rounded-full mt-4">Book a Discovery Call</a>
+        <a href="contact.html" class="btn-purple block text-center px-6 py-3.5 rounded-full mt-4">Book a Discovery Call</a>
       </div>
     </div>
   </nav>
@@ -109,7 +109,7 @@
             Leadership development, DEIA strategy, and executive coaching for organizations ready to build cultures of trust.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 reveal">
-            <a href="contact.html" class="btn-gold px-8 py-4 rounded-full text-base text-center">Book a Discovery Call</a>
+            <a href="contact.html" class="btn-purple px-8 py-4 rounded-full text-base text-center">Book a Discovery Call</a>
             <a href="services.html" class="btn-ghost px-8 py-4 rounded-full text-base text-center">Explore Services</a>
           </div>
         </div>
@@ -128,12 +128,43 @@
   <section class="py-12 border-y border-gold/10 bg-onyx/50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 reveal">
       <p class="text-center text-xs font-medium text-ash uppercase tracking-[0.2em] mb-8">Trusted by Organizations Across Ontario</p>
-      <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-14 text-silver/50 mb-8">
-        <span class="text-sm font-medium tracking-wide">CAMH</span>
-        <span class="text-sm font-medium tracking-wide">Halton CAS</span>
-        <span class="text-sm font-medium tracking-wide">Queen&rsquo;s University</span>
-        <span class="text-sm font-medium tracking-wide">Unity Health Toronto</span>
-        <span class="text-sm font-medium tracking-wide">Quinte Health Care</span>
+      <div class="flex flex-wrap justify-center items-center gap-10 sm:gap-16 mb-10">
+        <!-- CAMH -->
+        <div class="trust-logo" title="Centre for Addiction and Mental Health">
+          <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="24" font-family="Sora, sans-serif" font-weight="600" font-size="22" fill="#FAF7F2" letter-spacing="3">CAMH</text>
+          </svg>
+        </div>
+        <!-- Halton CAS -->
+        <div class="trust-logo" title="Halton Children's Aid Society">
+          <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="Sora, sans-serif" font-weight="500" font-size="14" fill="#FAF7F2">HALTON</text>
+            <text x="0" y="30" font-family="Sora, sans-serif" font-weight="300" font-size="8" fill="#A8A8A8" letter-spacing="1.5">CHILDREN'S AID SOCIETY</text>
+          </svg>
+        </div>
+        <!-- Queen's University -->
+        <div class="trust-logo" title="Queen's University">
+          <svg width="130" height="36" viewBox="0 0 130 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="18" y="24" font-family="Fraunces, serif" font-weight="600" font-size="18" fill="#FAF7F2">Queen's</text>
+            <text x="18" y="34" font-family="Sora, sans-serif" font-weight="300" font-size="8" fill="#A8A8A8" letter-spacing="1.5">UNIVERSITY</text>
+            <!-- Shield icon -->
+            <path d="M8 4 L14 4 L14 16 C14 20 11 22 8 24 C5 22 2 20 2 16 L2 4 Z" stroke="#FAF7F2" stroke-width="1.2" fill="none" opacity="0.7"/>
+          </svg>
+        </div>
+        <!-- Unity Health Toronto -->
+        <div class="trust-logo" title="Unity Health Toronto">
+          <svg width="110" height="36" viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="Sora, sans-serif" font-weight="500" font-size="15" fill="#FAF7F2">Unity Health</text>
+            <text x="0" y="32" font-family="Sora, sans-serif" font-weight="300" font-size="9" fill="#A8A8A8" letter-spacing="1">TORONTO</text>
+          </svg>
+        </div>
+        <!-- Quinte Health Care -->
+        <div class="trust-logo" title="Quinte Health Care">
+          <svg width="130" height="36" viewBox="0 0 130 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="Sora, sans-serif" font-weight="500" font-size="15" fill="#FAF7F2">Quinte Health</text>
+            <text x="0" y="32" font-family="Sora, sans-serif" font-weight="300" font-size="9" fill="#A8A8A8" letter-spacing="1">CARE</text>
+          </svg>
+        </div>
       </div>
       <div class="flex flex-wrap justify-center items-center gap-3 text-xs">
         <span class="border border-gold/20 text-gold/70 px-3 py-1 rounded-full">MA Leadership</span>
@@ -274,7 +305,7 @@
         <p class="text-cream/80 font-heading italic text-xl sm:text-2xl leading-relaxed mb-8">
           &ldquo;Under pressure, leaders don&rsquo;t rise to the moment &mdash; they fall back on who they&rsquo;ve already practiced being.&rdquo;
         </p>
-        <a href="bold-method.html" class="btn-gold px-8 py-3.5 rounded-full text-sm inline-block">Discover the BOLD&trade; Method</a>
+        <a href="bold-method.html" class="btn-purple px-8 py-3.5 rounded-full text-sm inline-block">Discover the BOLD&trade; Method</a>
       </div>
     </div>
   </section>
@@ -367,14 +398,14 @@
   </section>
 
   <!-- ========== FINAL CTA ========== -->
-  <section class="py-20 lg:py-28 bg-burgundy">
+  <section class="py-20 lg:py-28 bg-purple">
     <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center reveal">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">Ready to Build a Leadership Culture That Lasts?</h2>
       <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">
         Whether you need leadership development, DEIA strategy, executive coaching, or workplace investigations &mdash; let&rsquo;s start with a conversation.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="contact.html" class="bg-white text-burgundy px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors text-center">Book a Discovery Call</a>
+        <a href="contact.html" class="bg-white text-purple px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors text-center">Book a Discovery Call</a>
         <a href="services.html" class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors text-center">View All Services</a>
       </div>
     </div>
@@ -428,7 +459,7 @@
             <li><a href="tel:+14167683612" class="hover:text-cream transition-colors">(416) 768-3612</a></li>
             <li class="pt-1 text-ash/60">Serving organizations across Ontario and beyond</li>
           </ul>
-          <a href="contact.html" class="btn-gold inline-block mt-5 px-5 py-2 rounded-full text-xs">Book a Discovery Call</a>
+          <a href="contact.html" class="btn-purple inline-block mt-5 px-5 py-2 rounded-full text-xs">Book a Discovery Call</a>
         </div>
       </div>
 
