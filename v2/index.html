@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AME Consulting — Leadership Development, DEIA Strategy & Executive Coaching</title>
+  <meta name="description" content="AME Consulting provides leadership development, DEIA consulting, executive coaching, and workplace investigations for organizations ready to build cultures of trust. Led by Aileen M. Edwards, MA, ACC.">
+  <meta property="og:title" content="AME Consulting — Leadership Development & Executive Coaching">
+  <meta property="og:description" content="Leadership development, DEIA strategy, and executive coaching for organizations ready to build cultures of trust.">
+  <meta property="og:image" content="images/aileen-headshot-blazer.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: { DEFAULT: '#722F37', dark: '#5A252C', light: '#8B3A43' },
+            gold: { DEFAULT: '#C9A94E', light: '#D4BA6A' },
+            cream: { DEFAULT: '#FAF7F2', dark: '#F0EBE1' },
+            charcoal: { DEFAULT: '#2D2D2D', light: '#4A4A4A' },
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-cream font-sans text-charcoal">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto">
+          <span class="hidden sm:block text-lg font-serif font-semibold text-charcoal">AME Consulting</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="about.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">About</a>
+          <div class="nav-item relative">
+            <a href="services/index.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors flex items-center gap-1">
+              Services
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
+              <a href="services/leadership-development.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Leadership Development</a>
+              <a href="services/deia-consulting.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">DEIA Consulting</a>
+              <a href="services/executive-coaching.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Executive Coaching</a>
+              <a href="services/workplace-investigations.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Workplace Investigations</a>
+            </div>
+          </div>
+          <a href="bold-method.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">BOLD&trade; Method</a>
+          <a href="book.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Book</a>
+          <a href="speaking.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Speaking</a>
+          <a href="testimonials.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Testimonials</a>
+          <a href="blog.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Blog</a>
+          <a href="contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">Book a Discovery Call</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-white z-50 flex flex-col lg:hidden">
+      <div class="flex items-center justify-between px-6 h-20 border-b">
+        <span class="text-lg font-serif font-semibold">AME Consulting</span>
+        <button id="mobile-nav-close" class="p-2" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6 py-8 space-y-6">
+        <a href="about.html" class="block text-lg font-medium">About</a>
+        <a href="services/index.html" class="block text-lg font-medium">Services</a>
+        <a href="services/leadership-development.html" class="block text-base text-charcoal-light pl-4">Leadership Development</a>
+        <a href="services/deia-consulting.html" class="block text-base text-charcoal-light pl-4">DEIA Consulting</a>
+        <a href="services/executive-coaching.html" class="block text-base text-charcoal-light pl-4">Executive Coaching</a>
+        <a href="services/workplace-investigations.html" class="block text-base text-charcoal-light pl-4">Workplace Investigations</a>
+        <a href="bold-method.html" class="block text-lg font-medium">BOLD&trade; Method</a>
+        <a href="book.html" class="block text-lg font-medium">Book</a>
+        <a href="speaking.html" class="block text-lg font-medium">Speaking</a>
+        <a href="testimonials.html" class="block text-lg font-medium">Testimonials</a>
+        <a href="blog.html" class="block text-lg font-medium">Blog</a>
+        <a href="contact.html" class="block text-lg font-medium">Contact</a>
+        <a href="contact.html" class="btn-primary block text-center px-6 py-3 rounded-full font-semibold mt-4">Book a Discovery Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text -->
+        <div class="order-2 lg:order-1">
+          <div class="gold-accent mb-6"></div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-charcoal leading-tight mb-6">
+            Stop Auditioning<br>for Belonging
+          </h1>
+          <p class="text-lg sm:text-xl text-charcoal-light leading-relaxed mb-8">
+            Leadership development, DEIA strategy, and executive coaching for organizations ready to build cultures of trust, accountability, and authentic leadership.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="contact.html" class="btn-primary px-8 py-4 rounded-full text-base font-semibold text-center">Book a Discovery Call</a>
+            <a href="services/index.html" class="btn-outline px-8 py-4 rounded-full text-base font-semibold text-center">Explore Services</a>
+          </div>
+        </div>
+        <!-- Photo -->
+        <div class="order-1 lg:order-2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-burgundy/10 rounded-2xl -rotate-3"></div>
+            <img src="images/aileen-headshot-warm.jpg" alt="Aileen M. Edwards — Leadership Coach and HR Consultant" class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:max-w-none">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST BAR ========== -->
+  <section class="bg-white py-10 border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold text-charcoal-light uppercase tracking-wider mb-6">Trusted by Organizations Across Ontario</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 text-charcoal-light">
+        <span class="text-sm font-medium opacity-60">CAMH</span>
+        <span class="text-sm font-medium opacity-60">Halton CAS</span>
+        <span class="text-sm font-medium opacity-60">Queen&rsquo;s University</span>
+        <span class="text-sm font-medium opacity-60">Unity Health Toronto</span>
+        <span class="text-sm font-medium opacity-60">Quinte Health Care</span>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-4 mt-6 text-xs text-charcoal-light">
+        <span class="bg-cream px-3 py-1 rounded-full">MA Leadership</span>
+        <span class="bg-cream px-3 py-1 rounded-full">ACC (ICF)</span>
+        <span class="bg-cream px-3 py-1 rounded-full">RCC</span>
+        <span class="bg-cream px-3 py-1 rounded-full">Certified Crucial Conversations</span>
+        <span class="bg-cream px-3 py-1 rounded-full">30+ Years Healthcare Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">How We Work With Organizations</h2>
+        <p class="text-lg text-charcoal-light">From leadership development to workplace investigations, AME Consulting brings three decades of executive experience to every engagement.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Leadership Development -->
+        <div class="service-card bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-burgundy/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">Leadership Development</h3>
+          <p class="text-charcoal-light mb-6">Multi-phase programs for organizational teams. CliftonStrengths, 360 assessments, emotional intelligence, and strategic conversations.</p>
+          <a href="services/leadership-development.html" class="text-burgundy font-semibold text-sm hover:text-burgundy-dark transition-colors inline-flex items-center gap-1">
+            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- DEIA Consulting -->
+        <div class="service-card bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-burgundy/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">DEIA Consulting</h3>
+          <p class="text-charcoal-light mb-6">Listening sessions, strategy roadmaps, and training delivery grounded in lived experience — not theory. Recorded sessions for organizational reuse.</p>
+          <a href="services/deia-consulting.html" class="text-burgundy font-semibold text-sm hover:text-burgundy-dark transition-colors inline-flex items-center gap-1">
+            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Executive Coaching -->
+        <div class="service-card bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-burgundy/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-3">Executive Coaching</h3>
+          <p class="text-charcoal-light mb-6">1:1 coaching using the proprietary BOLD&trade; Method. Executive presence, high-stakes conversations, and career navigation for women leaders.</p>
+          <a href="services/executive-coaching.html" class="text-burgundy font-semibold text-sm hover:text-burgundy-dark transition-colors inline-flex items-center gap-1">
+            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="services/index.html" class="text-burgundy font-semibold hover:text-burgundy-dark transition-colors inline-flex items-center gap-2">
+          View All Services Including Workplace Investigations
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOLD METHOD ========== -->
+  <section class="py-20 lg:py-28 bg-charcoal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">The BOLD&trade; Method</h2>
+        <p class="text-lg text-gray-300">A proprietary coaching and leadership framework grounded in three decades of executive experience.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="bold-pillar text-center p-6">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-serif font-bold text-gold">B</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-gold mb-2">Becoming</h3>
+          <p class="text-gray-300 text-sm">Shedding the stories that teach women to stay small</p>
+        </div>
+        <div class="bold-pillar text-center p-6">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-serif font-bold text-gold">O</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-gold mb-2">Owning</h3>
+          <p class="text-gray-300 text-sm">Claiming authority and worth without apology</p>
+        </div>
+        <div class="bold-pillar text-center p-6">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-serif font-bold text-gold">L</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-gold mb-2">Leading</h3>
+          <p class="text-gray-300 text-sm">Influencing under pressure and building cultures of trust</p>
+        </div>
+        <div class="bold-pillar text-center p-6">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-serif font-bold text-gold">D</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-gold mb-2">Disrupting</h3>
+          <p class="text-gray-300 text-sm">Redesigning what leadership looks like rather than accepting sameness</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-300 italic font-serif text-lg mb-8">&ldquo;Under pressure, leaders don&rsquo;t rise to the moment &mdash; they fall back on who they&rsquo;ve already practiced being.&rdquo;</p>
+        <a href="bold-method.html" class="btn-gold px-8 py-3 rounded-full font-semibold text-sm inline-block">Discover the BOLD&trade; Method</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">What Leaders Are Saying</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="testimonial-quote mb-6">
+            <p class="text-charcoal-light italic">&ldquo;Aileen is a remarkable force. She has this rare ability to see your potential even when you can&rsquo;t see it yourself.&rdquo;</p>
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Linda Raynier</p>
+            <p class="text-xs text-charcoal-light">Author &amp; Keynote Speaker, 2.6M+ LinkedIn Followers</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="testimonial-quote mb-6">
+            <p class="text-charcoal-light italic">&ldquo;She didn&rsquo;t just offer advice; she helped me see myself and my path with fresh clarity. Aileen reframes challenges as opportunities for alignment and growth.&rdquo;</p>
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Joan Taylor, CHRE</p>
+            <p class="text-xs text-charcoal-light">Enterprise HR Executive</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="testimonial-quote mb-6">
+            <p class="text-charcoal-light italic">&ldquo;Handled a sensitive issue with sophistication, delicacy, empathy, and transparency. Her ability to navigate complex dynamics is exceptional.&rdquo;</p>
+          </div>
+          <div>
+            <p class="font-semibold text-sm">Myfanwy Marshall</p>
+            <p class="text-xs text-charcoal-light">VP People &amp; Experience</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="testimonials.html" class="btn-outline px-8 py-3 rounded-full font-semibold text-sm inline-block">Read All Testimonials</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOK ========== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <div class="gold-accent mb-6"></div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Black Skin, Bold Heart</h2>
+          <p class="text-lg text-charcoal-light mb-4">A memoir chronicling 30 years of navigating corporate leadership as a Black woman in Canadian healthcare.</p>
+          <p class="text-charcoal-light mb-6">From the boardroom to the C-suite, Aileen shares the reckoning of ascending in spaces not built for her &mdash; and the bold decision to leave for alignment and authenticity.</p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="bg-cream px-3 py-1 rounded-full text-xs font-medium">Executive Identity</span>
+            <span class="bg-cream px-3 py-1 rounded-full text-xs font-medium">The Messy Middle</span>
+            <span class="bg-cream px-3 py-1 rounded-full text-xs font-medium">Leading While Black</span>
+            <span class="bg-cream px-3 py-1 rounded-full text-xs font-medium">Alignment Over Status</span>
+          </div>
+          <div class="flex gap-4">
+            <a href="book.html" class="btn-primary px-6 py-3 rounded-full text-sm font-semibold">Read More About the Book</a>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="bg-cream-dark rounded-2xl p-12 text-center max-w-sm">
+            <div class="bg-charcoal rounded-lg p-8 shadow-2xl">
+              <p class="text-gold font-serif text-2xl font-bold mb-2">Black Skin,</p>
+              <p class="text-gold font-serif text-2xl font-bold mb-4">Bold Heart</p>
+              <div class="w-12 h-0.5 bg-gold mx-auto mb-4"></div>
+              <p class="text-gray-400 text-sm">Aileen M. Edwards</p>
+            </div>
+            <p class="text-xs text-charcoal-light mt-4">Book cover placeholder — final cover coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOARD & COMMUNITY ========== -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Beyond Consulting</h2>
+        <p class="text-lg text-charcoal-light">Aileen&rsquo;s commitment to community and governance extends beyond her consulting practice.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="w-12 h-12 bg-burgundy/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-serif font-bold mb-2">Chair of the Board</h3>
+          <p class="text-sm text-charcoal-light mb-1">Three Oaks Foundation, Belleville ON</p>
+          <p class="text-sm text-charcoal-light">Primary domestic violence shelter for Hastings &amp; Prince Edward Counties. 24/7 emergency shelter, crisis line, outreach counselling, and transitional housing.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="w-12 h-12 bg-burgundy/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-lg font-serif font-bold mb-2">Board of Directors</h3>
+          <p class="text-sm text-charcoal-light mb-1">Quinte Health Care</p>
+          <p class="text-sm text-charcoal-light">Multi-site hospital system serving the Quinte region. Board liaison to Trenton Memorial Hospital Foundation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="py-20 lg:py-28 bg-burgundy text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-6">Ready to Build a Leadership Culture That Lasts?</h2>
+      <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto">Whether you&rsquo;re looking for leadership development, DEIA strategy, executive coaching, or workplace investigations &mdash; let&rsquo;s start with a conversation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-white text-burgundy px-8 py-4 rounded-full font-semibold hover:bg-cream transition-colors text-center">Book a Discovery Call</a>
+        <a href="services/index.html" class="border-2 border-white/40 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-colors text-center">View Services &amp; Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-charcoal text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <img src="images/logo.png" alt="AME Consulting" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-gray-400 text-sm mb-4">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/in/aileen-m-edwards" target="_blank" rel="noopener" class="text-gray-400 hover:text-gold transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/ame_consulting/" target="_blank" rel="noopener" class="text-gray-400 hover:text-gold transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="services/leadership-development.html" class="hover:text-white transition-colors">Leadership Development</a></li>
+            <li><a href="services/deia-consulting.html" class="hover:text-white transition-colors">DEIA Consulting</a></li>
+            <li><a href="services/executive-coaching.html" class="hover:text-white transition-colors">Executive Coaching</a></li>
+            <li><a href="services/workplace-investigations.html" class="hover:text-white transition-colors">Workplace Investigations</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="about.html" class="hover:text-white transition-colors">About Aileen</a></li>
+            <li><a href="bold-method.html" class="hover:text-white transition-colors">The BOLD&trade; Method</a></li>
+            <li><a href="book.html" class="hover:text-white transition-colors">Black Skin, Bold Heart</a></li>
+            <li><a href="speaking.html" class="hover:text-white transition-colors">Speaking</a></li>
+            <li><a href="testimonials.html" class="hover:text-white transition-colors">Testimonials</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-white transition-colors">amedwards@ameconsulting.ca</a></li>
+            <li><a href="tel:+14167683612" class="hover:text-white transition-colors">(416) 768-3612</a></li>
+            <li class="pt-2">Serving organizations across Ontario and beyond</li>
+          </ul>
+          <a href="contact.html" class="inline-block mt-4 btn-gold px-5 py-2 rounded-full text-xs font-semibold">Book a Discovery Call</a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 AME Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

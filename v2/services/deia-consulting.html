@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEIA Consulting &amp; Strategy — AME Consulting</title>
+  <meta name="description" content="DEIA consulting grounded in lived experience — listening sessions, strategy roadmaps, training delivery, and culture audits for organizations across Ontario.">
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: { DEFAULT: '#722F37', dark: '#5A252C', light: '#8B3A43' },
+            gold: { DEFAULT: '#C9A94E', light: '#D4BA6A' },
+            cream: { DEFAULT: '#FAF7F2', dark: '#F0EBE1' },
+            charcoal: { DEFAULT: '#2D2D2D', light: '#4A4A4A' },
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body class="bg-cream font-sans text-charcoal">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex items-center gap-3">
+          <img src="../images/logo.png" alt="AME Consulting" class="h-12 w-auto">
+          <span class="hidden sm:block text-lg font-serif font-semibold text-charcoal">AME Consulting</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="../about.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">About</a>
+          <div class="nav-item relative">
+            <a href="index.html" class="text-sm font-medium text-burgundy border-b-2 border-gold pb-0.5 flex items-center gap-1">
+              Services
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <div class="nav-dropdown absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
+              <a href="leadership-development.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Leadership Development</a>
+              <a href="deia-consulting.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors font-medium text-burgundy">DEIA Consulting</a>
+              <a href="executive-coaching.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Executive Coaching</a>
+              <a href="workplace-investigations.html" class="block px-4 py-2 text-sm hover:bg-cream transition-colors">Workplace Investigations</a>
+            </div>
+          </div>
+          <a href="../bold-method.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">BOLD&trade; Method</a>
+          <a href="../book.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Book</a>
+          <a href="../speaking.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Speaking</a>
+          <a href="../testimonials.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Testimonials</a>
+          <a href="../blog.html" class="text-sm font-medium text-charcoal-light hover:text-burgundy transition-colors">Blog</a>
+          <a href="../contact.html" class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">Book a Discovery Call</a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="mobile-nav fixed inset-0 bg-white z-50 flex flex-col lg:hidden">
+      <div class="flex items-center justify-between px-6 h-20 border-b">
+        <span class="text-lg font-serif font-semibold">AME Consulting</span>
+        <button id="mobile-nav-close" class="p-2" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6 py-8 space-y-6">
+        <a href="../about.html" class="block text-lg font-medium">About</a>
+        <a href="index.html" class="block text-lg font-medium">Services</a>
+        <a href="leadership-development.html" class="block text-base text-charcoal-light pl-4">Leadership Development</a>
+        <a href="deia-consulting.html" class="block text-base text-burgundy pl-4 font-medium">DEIA Consulting</a>
+        <a href="executive-coaching.html" class="block text-base text-charcoal-light pl-4">Executive Coaching</a>
+        <a href="workplace-investigations.html" class="block text-base text-charcoal-light pl-4">Workplace Investigations</a>
+        <a href="../bold-method.html" class="block text-lg font-medium">BOLD&trade; Method</a>
+        <a href="../book.html" class="block text-lg font-medium">Book</a>
+        <a href="../speaking.html" class="block text-lg font-medium">Speaking</a>
+        <a href="../testimonials.html" class="block text-lg font-medium">Testimonials</a>
+        <a href="../blog.html" class="block text-lg font-medium">Blog</a>
+        <a href="../contact.html" class="block text-lg font-medium">Contact</a>
+        <a href="../contact.html" class="btn-primary block text-center px-6 py-3 rounded-full font-semibold mt-4">Book a Discovery Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="pt-20">
+    <div class="bg-burgundy text-white py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-gold text-sm font-semibold uppercase tracking-wider mb-3"><a href="index.html" class="hover:text-gold-light">Services</a> &rarr; DEIA Consulting</p>
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold mb-4">DEIA Consulting &amp; Strategy</h1>
+        <p class="text-lg text-white/80 max-w-2xl">Diversity, equity, inclusion, and accessibility work grounded in lived experience &mdash; not theory.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-8">
+          <div>
+            <h2 class="text-2xl font-serif font-bold mb-4">The Difference</h2>
+            <p class="text-charcoal-light leading-relaxed mb-4">
+              Most DEIA training focuses on awareness. Awareness is the starting line, not the finish. AME Consulting&rsquo;s approach goes deeper &mdash; into the structural, behavioral, and cultural patterns that perpetuate exclusion even in organizations that genuinely want to do better.
+            </p>
+            <p class="text-charcoal-light leading-relaxed">
+              Aileen brings something most DEIA consultants don&rsquo;t: 30+ years of lived experience as a Black woman in C-suite healthcare leadership. She&rsquo;s not teaching from a textbook. She&rsquo;s sharing what she learned navigating the same boardrooms, the same micro-aggressions, and the same organizational blind spots that your team is dealing with right now.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 border border-gray-100">
+            <p class="font-serif text-xl text-charcoal italic">
+              &ldquo;I&rsquo;ve sat in the rooms where the decisions get made. I&rsquo;ve been the only one. I know what it takes to shift a culture because I&rsquo;ve lived inside the cultures that need shifting.&rdquo;
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-serif font-bold mb-4">Our Approach</h2>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-serif font-bold flex-shrink-0">1</div>
+                <div>
+                  <h3 class="font-semibold">Listen First</h3>
+                  <p class="text-sm text-charcoal-light">Confidential listening sessions with employees at every level to understand the real culture &mdash; not the one described in the mission statement</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-serif font-bold flex-shrink-0">2</div>
+                <div>
+                  <h3 class="font-semibold">Diagnose</h3>
+                  <p class="text-sm text-charcoal-light">Synthesize findings into an honest assessment of where the organization stands &mdash; including the gaps leadership may not see</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-serif font-bold flex-shrink-0">3</div>
+                <div>
+                  <h3 class="font-semibold">Build the Roadmap</h3>
+                  <p class="text-sm text-charcoal-light">A practical, phased strategy that connects DEIA goals to organizational outcomes &mdash; not just compliance boxes</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-serif font-bold flex-shrink-0">4</div>
+                <div>
+                  <h3 class="font-semibold">Deliver &amp; Embed</h3>
+                  <p class="text-sm text-charcoal-light">Training, workshops, and coaching that move beyond awareness to behavioral change. Sessions can be recorded for organizational reuse.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-serif font-bold mb-4">What We Offer</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold mb-2">Unconscious Bias Workshops</h3>
+                <p class="text-sm text-charcoal-light">Beyond awareness: tools for recognizing and interrupting bias in real-time decision-making</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold mb-2">DEI Strategy Development</h3>
+                <p class="text-sm text-charcoal-light">Comprehensive roadmaps tied to organizational goals, with measurable milestones</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold mb-2">Culture Audits</h3>
+                <p class="text-sm text-charcoal-light">Honest assessment of organizational culture through listening sessions and data analysis</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 border border-gray-100">
+                <h3 class="font-semibold mb-2">Recorded Training</h3>
+                <p class="text-sm text-charcoal-light">Sessions recorded for organizational reuse, extending your investment across the entire team</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-28 space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 class="font-serif font-bold text-lg mb-4">Quick Facts</h3>
+              <dl class="space-y-4 text-sm">
+                <div>
+                  <dt class="font-semibold text-charcoal">Format</dt>
+                  <dd class="text-charcoal-light">Listening sessions + strategy + training</dd>
+                </div>
+                <div>
+                  <dt class="font-semibold text-charcoal">Delivery</dt>
+                  <dd class="text-charcoal-light">In-person and/or virtual</dd>
+                </div>
+                <div>
+                  <dt class="font-semibold text-charcoal">Differentiator</dt>
+                  <dd class="text-charcoal-light">30+ years lived experience in executive leadership</dd>
+                </div>
+                <div>
+                  <dt class="font-semibold text-charcoal">Investment</dt>
+                  <dd class="text-charcoal-light">Upon request</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="bg-burgundy text-white rounded-xl p-6">
+              <h3 class="font-serif font-bold text-lg mb-3">Start the Conversation</h3>
+              <p class="text-white/80 text-sm mb-4">DEIA work is personal. Let&rsquo;s talk about where your organization stands and where it wants to go.</p>
+              <a href="../contact.html" class="bg-white text-burgundy px-6 py-3 rounded-full font-semibold text-sm hover:bg-cream transition-colors block text-center">Book a Discovery Call</a>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 class="font-serif font-bold text-lg mb-3">Other Services</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="leadership-development.html" class="text-burgundy hover:text-burgundy-dark transition-colors">Leadership Development &rarr;</a></li>
+                <li><a href="executive-coaching.html" class="text-burgundy hover:text-burgundy-dark transition-colors">Executive Coaching &rarr;</a></li>
+                <li><a href="workplace-investigations.html" class="text-burgundy hover:text-burgundy-dark transition-colors">Workplace Investigations &rarr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-charcoal text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-1">
+          <img src="../images/logo.png" alt="AME Consulting" class="h-12 w-auto mb-4 brightness-200">
+          <p class="text-gray-400 text-sm mb-4">Leadership development, DEIA consulting, and executive coaching for organizations ready to lead differently.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="leadership-development.html" class="hover:text-white transition-colors">Leadership Development</a></li>
+            <li><a href="deia-consulting.html" class="hover:text-white transition-colors">DEIA Consulting</a></li>
+            <li><a href="executive-coaching.html" class="hover:text-white transition-colors">Executive Coaching</a></li>
+            <li><a href="workplace-investigations.html" class="hover:text-white transition-colors">Workplace Investigations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="../about.html" class="hover:text-white transition-colors">About Aileen</a></li>
+            <li><a href="../bold-method.html" class="hover:text-white transition-colors">The BOLD&trade; Method</a></li>
+            <li><a href="../book.html" class="hover:text-white transition-colors">Black Skin, Bold Heart</a></li>
+            <li><a href="../speaking.html" class="hover:text-white transition-colors">Speaking</a></li>
+            <li><a href="../testimonials.html" class="hover:text-white transition-colors">Testimonials</a></li>
+            <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-gold mb-4">Get in Touch</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="mailto:amedwards@ameconsulting.ca" class="hover:text-white transition-colors">amedwards@ameconsulting.ca</a></li>
+            <li><a href="tel:+14167683612" class="hover:text-white transition-colors">(416) 768-3612</a></li>
+          </ul>
+          <a href="../contact.html" class="inline-block mt-4 btn-gold px-5 py-2 rounded-full text-xs font-semibold">Book a Discovery Call</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 AME Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
